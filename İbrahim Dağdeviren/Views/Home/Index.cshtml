@@ -1,0 +1,30 @@
+﻿@model İbrahim_Dağdeviren.Models.wia
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	 <meta name="viewport" content="width=device-width" />
+	<title>Ana Sayfa</title>
+</head>
+<body>
+	<div>
+		<b>Ad: </b> @Model.Name<br />
+		<b>Şifre: </b>  @Model.Password<br />
+	</div>
+	<br />
+	<br />
+	<div>
+		@using (Html.BeginForm())
+            {
+		@("Name")	@Html.TextBoxFor(x => x.Name)<br />
+        @("Password") @Html.TextBoxFor(x => x.Password)<br />
+		 <input type="submit" value="Gönder" />
+
+		}
+	</div>
+</body>
+</html>
